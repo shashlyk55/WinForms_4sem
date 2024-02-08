@@ -1,0 +1,13 @@
+D:\study\OOP\Lab01_11\bin\Debug\Lab01_11.exe.config
+D:\study\OOP\Lab01_11\bin\Debug\Lab01_11.exe
+D:\study\OOP\Lab01_11\bin\Debug\Lab01_11.pdb
+D:\study\OOP\Lab01_11\obj\Debug\Lab01_11.csproj.AssemblyReference.cache
+D:\study\OOP\Lab01_11\obj\Debug\Lab01_11.Form1.resources
+D:\study\OOP\Lab01_11\obj\Debug\Lab01_11.Form2.resources
+D:\study\OOP\Lab01_11\obj\Debug\Lab01_11.Properties.Resources.resources
+D:\study\OOP\Lab01_11\obj\Debug\Lab01_11.csproj.GenerateResource.cache
+D:\study\OOP\Lab01_11\obj\Debug\Lab01_11.csproj.CoreCompileInputs.cache
+D:\study\OOP\Lab01_11\obj\Debug\Lab01_11.exe
+D:\study\OOP\Lab01_11\obj\Debug\Lab01_11.pdb
+D:\study\OOP\Lab01_11\obj\Debug\Lab01_11.Form3.resources
+D:\study\OOP\Lab01_11\obj\Debug\Lab01_11.Form4.resources
