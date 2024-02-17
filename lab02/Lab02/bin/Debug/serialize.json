@@ -1,0 +1,34 @@
+[
+  {
+    "Name": "Алгоритмы и Структуры Данных",
+    "Term": "1",
+    "Course": 2,
+    "Spec": "ПОИТ",
+    "ControlType": "Экзамен",
+    "HoursCounty": 16,
+    "Lector": {
+      "Surname": "Шиман",
+      "Name": "Дмитрий",
+      "ThirdName": "Васильевич",
+      "Kafedra": "Кафедра ПИ",
+      "Kabinet": 211,
+      "Phone": "+483(48)39-84-783"
+    }
+  },
+  {
+    "Name": "Конструирование ПО",
+    "Term": "1, 2",
+    "Course": 1,
+    "Spec": "ПОИТ, ИСИТ",
+    "ControlType": "Экзамен",
+    "HoursCounty": 34,
+    "Lector": {
+      "Surname": "Наркевич",
+      "Name": "Аделина",
+      "ThirdName": "Сергеевна",
+      "Kafedra": "Кафедра ПИ",
+      "Kabinet": 211,
+      "Phone": "+871(83)78-93-173"
+    }
+  }
+]
