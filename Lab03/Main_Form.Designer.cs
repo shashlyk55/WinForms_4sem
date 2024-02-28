@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.textBox_Discipline = new System.Windows.Forms.TextBox();
             this.label_Discipline = new System.Windows.Forms.Label();
             this.label_Course = new System.Windows.Forms.Label();
@@ -77,7 +78,25 @@
             this.MenuItem_SortOnHoursCounty = new System.Windows.Forms.ToolStripMenuItem();
             this.Save_MenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutProgram_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.инструментыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStrip = new System.Windows.Forms.ToolStrip();
+            this.toolStripButton_HideTools = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripLabel_Search = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripDropDownButton_Sorting = new System.Windows.Forms.ToolStripDropDownButton();
+            this.SortOnControlType_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.SortOnHoursCounty_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton_Clear = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton_Delete = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton_Forward = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton_Back = new System.Windows.Forms.ToolStripButton();
+            this.label_itemsCounty = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox_ControlType.SuspendLayout();
             this.groupBox_LectorInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider_Discipline)).BeginInit();
@@ -93,6 +112,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.trackBar_HourCounty)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider_Term)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            this.toolStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // textBox_Discipline
@@ -197,7 +217,7 @@
             this.groupBox_LectorInfo.Controls.Add(this.label_LectorThirdname);
             this.groupBox_LectorInfo.Controls.Add(this.label_LectorName);
             this.groupBox_LectorInfo.Controls.Add(this.label_LectorSurname);
-            this.groupBox_LectorInfo.Location = new System.Drawing.Point(438, 113);
+            this.groupBox_LectorInfo.Location = new System.Drawing.Point(438, 68);
             this.groupBox_LectorInfo.Name = "groupBox_LectorInfo";
             this.groupBox_LectorInfo.Size = new System.Drawing.Size(300, 194);
             this.groupBox_LectorInfo.TabIndex = 18;
@@ -325,7 +345,7 @@
             // 
             // button_SaveToJSON
             // 
-            this.button_SaveToJSON.Location = new System.Drawing.Point(12, 531);
+            this.button_SaveToJSON.Location = new System.Drawing.Point(12, 479);
             this.button_SaveToJSON.Name = "button_SaveToJSON";
             this.button_SaveToJSON.Size = new System.Drawing.Size(125, 23);
             this.button_SaveToJSON.TabIndex = 19;
@@ -335,7 +355,7 @@
             // 
             // button_LoadFromJSON
             // 
-            this.button_LoadFromJSON.Location = new System.Drawing.Point(156, 531);
+            this.button_LoadFromJSON.Location = new System.Drawing.Point(147, 479);
             this.button_LoadFromJSON.Name = "button_LoadFromJSON";
             this.button_LoadFromJSON.Size = new System.Drawing.Size(125, 23);
             this.button_LoadFromJSON.TabIndex = 20;
@@ -348,7 +368,7 @@
             this.listBox_ShowList.FormattingEnabled = true;
             this.listBox_ShowList.Location = new System.Drawing.Point(12, 352);
             this.listBox_ShowList.Name = "listBox_ShowList";
-            this.listBox_ShowList.Size = new System.Drawing.Size(726, 173);
+            this.listBox_ShowList.Size = new System.Drawing.Size(726, 121);
             this.listBox_ShowList.TabIndex = 21;
             // 
             // errorProvider_Discipline
@@ -491,10 +511,11 @@
             this.Search_MenuItem,
             this.Sort_MenuItem,
             this.Save_MenuItem,
-            this.aboutProgram_ToolStripMenuItem});
+            this.aboutProgram_ToolStripMenuItem,
+            this.инструментыToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(795, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(746, 24);
             this.menuStrip1.TabIndex = 27;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -542,21 +563,178 @@
             this.aboutProgram_ToolStripMenuItem.Text = "О программе";
             this.aboutProgram_ToolStripMenuItem.Click += new System.EventHandler(this.AboutProgram_ToolStripMenuItem_Click);
             // 
-            // toolStrip1
+            // инструментыToolStripMenuItem
             // 
-            this.toolStrip1.Location = new System.Drawing.Point(0, 24);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(795, 25);
-            this.toolStrip1.TabIndex = 28;
-            this.toolStrip1.Text = "toolStrip1";
+            this.инструментыToolStripMenuItem.Name = "инструментыToolStripMenuItem";
+            this.инструментыToolStripMenuItem.Size = new System.Drawing.Size(95, 20);
+            this.инструментыToolStripMenuItem.Text = "Инструменты";
+            this.инструментыToolStripMenuItem.Click += new System.EventHandler(this.Tools_ToolStripMenuItem_Click);
+            // 
+            // toolStrip
+            // 
+            this.toolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton_HideTools,
+            this.toolStripSeparator6,
+            this.toolStripLabel_Search,
+            this.toolStripSeparator1,
+            this.toolStripDropDownButton_Sorting,
+            this.toolStripSeparator2,
+            this.toolStripButton_Clear,
+            this.toolStripSeparator3,
+            this.toolStripButton_Delete,
+            this.toolStripSeparator4,
+            this.toolStripButton_Forward,
+            this.toolStripSeparator5,
+            this.toolStripButton_Back});
+            this.toolStrip.Location = new System.Drawing.Point(0, 24);
+            this.toolStrip.Name = "toolStrip";
+            this.toolStrip.Size = new System.Drawing.Size(746, 25);
+            this.toolStrip.TabIndex = 28;
+            this.toolStrip.Text = "toolStrip";
+            // 
+            // toolStripButton_HideTools
+            // 
+            this.toolStripButton_HideTools.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButton_HideTools.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton_HideTools.Image")));
+            this.toolStripButton_HideTools.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton_HideTools.Name = "toolStripButton_HideTools";
+            this.toolStripButton_HideTools.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton_HideTools.Text = "×";
+            this.toolStripButton_HideTools.Click += new System.EventHandler(this.toolStripButton_HideTools_Click);
+            // 
+            // toolStripSeparator6
+            // 
+            this.toolStripSeparator6.Name = "toolStripSeparator6";
+            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripLabel_Search
+            // 
+            this.toolStripLabel_Search.Name = "toolStripLabel_Search";
+            this.toolStripLabel_Search.Size = new System.Drawing.Size(42, 22);
+            this.toolStripLabel_Search.Text = "Поиск";
+            this.toolStripLabel_Search.Click += new System.EventHandler(this.Save_MenuItem_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripDropDownButton_Sorting
+            // 
+            this.toolStripDropDownButton_Sorting.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripDropDownButton_Sorting.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.SortOnControlType_ToolStripMenuItem,
+            this.SortOnHoursCounty_ToolStripMenuItem});
+            this.toolStripDropDownButton_Sorting.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripDropDownButton_Sorting.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripDropDownButton_Sorting.Name = "toolStripDropDownButton_Sorting";
+            this.toolStripDropDownButton_Sorting.Size = new System.Drawing.Size(90, 22);
+            this.toolStripDropDownButton_Sorting.Text = "Сортировка";
+            this.toolStripDropDownButton_Sorting.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            // 
+            // SortOnControlType_ToolStripMenuItem
+            // 
+            this.SortOnControlType_ToolStripMenuItem.Name = "SortOnControlType_ToolStripMenuItem";
+            this.SortOnControlType_ToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
+            this.SortOnControlType_ToolStripMenuItem.Text = "По виду контроля";
+            this.SortOnControlType_ToolStripMenuItem.Click += new System.EventHandler(this.MenuItem_SortOnControlType_Click);
+            // 
+            // SortOnHoursCounty_ToolStripMenuItem
+            // 
+            this.SortOnHoursCounty_ToolStripMenuItem.Name = "SortOnHoursCounty_ToolStripMenuItem";
+            this.SortOnHoursCounty_ToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
+            this.SortOnHoursCounty_ToolStripMenuItem.Text = "По количеству лекций";
+            this.SortOnHoursCounty_ToolStripMenuItem.Click += new System.EventHandler(this.MenuItem_SortOnHoursCounty_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripButton_Clear
+            // 
+            this.toolStripButton_Clear.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButton_Clear.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton_Clear.Image")));
+            this.toolStripButton_Clear.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton_Clear.Name = "toolStripButton_Clear";
+            this.toolStripButton_Clear.Size = new System.Drawing.Size(63, 22);
+            this.toolStripButton_Clear.Text = "Очистить";
+            this.toolStripButton_Clear.Click += new System.EventHandler(this.toolStripButton_Clear_Click);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripButton_Delete
+            // 
+            this.toolStripButton_Delete.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButton_Delete.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton_Delete.Image")));
+            this.toolStripButton_Delete.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton_Delete.Name = "toolStripButton_Delete";
+            this.toolStripButton_Delete.Size = new System.Drawing.Size(55, 22);
+            this.toolStripButton_Delete.Text = "Удалить";
+            this.toolStripButton_Delete.Click += new System.EventHandler(this.toolStripButton_Delete_Click);
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripButton_Forward
+            // 
+            this.toolStripButton_Forward.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripButton_Forward.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButton_Forward.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton_Forward.Image")));
+            this.toolStripButton_Forward.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton_Forward.Name = "toolStripButton_Forward";
+            this.toolStripButton_Forward.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton_Forward.Text = ">";
+            // 
+            // toolStripSeparator5
+            // 
+            this.toolStripSeparator5.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
+            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 25);
+            // 
+            // toolStripButton_Back
+            // 
+            this.toolStripButton_Back.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripButton_Back.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButton_Back.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton_Back.Image")));
+            this.toolStripButton_Back.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton_Back.Name = "toolStripButton_Back";
+            this.toolStripButton_Back.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton_Back.Text = "<";
+            this.toolStripButton_Back.Click += new System.EventHandler(this.toolStripButton_Back_Click);
+            // 
+            // label_itemsCounty
+            // 
+            this.label_itemsCounty.AutoSize = true;
+            this.label_itemsCounty.Location = new System.Drawing.Point(341, 281);
+            this.label_itemsCounty.Name = "label_itemsCounty";
+            this.label_itemsCounty.Size = new System.Drawing.Size(149, 13);
+            this.label_itemsCounty.TabIndex = 29;
+            this.label_itemsCounty.Text = "Всего элементов в списке: ";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(341, 300);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(119, 13);
+            this.label1.TabIndex = 30;
+            this.label1.Text = "Последнее действие: ";
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Azure;
-            this.ClientSize = new System.Drawing.Size(795, 566);
-            this.Controls.Add(this.toolStrip1);
+            this.ClientSize = new System.Drawing.Size(746, 507);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label_itemsCounty);
+            this.Controls.Add(this.toolStrip);
             this.Controls.Add(this.label_HoursCounty);
             this.Controls.Add(this.trackBar_HourCounty);
             this.Controls.Add(this.groupBox_Terms);
@@ -580,6 +758,7 @@
             this.Name = "MainForm";
             this.Text = "Учебный отдел";
             this.Load += new System.EventHandler(this.Main_Form_Load);
+            this.Click += new System.EventHandler(this.Tools_ToolStripMenuItem_Click);
             this.groupBox_ControlType.ResumeLayout(false);
             this.groupBox_ControlType.PerformLayout();
             this.groupBox_LectorInfo.ResumeLayout(false);
@@ -599,6 +778,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider_Term)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.toolStrip.ResumeLayout(false);
+            this.toolStrip.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -654,7 +835,25 @@
         private System.Windows.Forms.ToolStripMenuItem MenuItem_SortOnControlType;
         private System.Windows.Forms.ToolStripMenuItem MenuItem_SortOnHoursCounty;
         private System.Windows.Forms.MaskedTextBox textBox_LectorPhone;
-        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStrip toolStrip;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel_Search;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton_Sorting;
+        private System.Windows.Forms.ToolStripMenuItem SortOnControlType_ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem SortOnHoursCounty_ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripButton toolStripButton_Clear;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripButton toolStripButton_Delete;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
+        private System.Windows.Forms.ToolStripButton toolStripButton_Back;
+        private System.Windows.Forms.ToolStripButton toolStripButton_Forward;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
+        private System.Windows.Forms.ToolStripButton toolStripButton_HideTools;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
+        private System.Windows.Forms.ToolStripMenuItem инструментыToolStripMenuItem;
+        private System.Windows.Forms.Label label_itemsCounty;
+        private System.Windows.Forms.Label label1;
     }
 }
 

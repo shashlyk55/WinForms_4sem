@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,7 +14,8 @@ namespace Lab03
 {
     public partial class MainForm : Form
     {
-        public List<Discipline> _disciplineList;
+        private List<Discipline> _disciplineList;
+        private FormHistory history;
         public MainForm()
         {
             InitializeComponent();
@@ -188,7 +190,8 @@ namespace Lab03
                 );
 
                 _disciplineList.Add(discipline);
-                ShowList(_disciplineList);
+                listBox_ShowList.Items.Add(discipline);
+                //ShowList(_disciplineList);
 
                 Serializer.SerializationList(_disciplineList, "serialize.json");
 
@@ -229,11 +232,20 @@ namespace Lab03
             _disciplineList.AddRange(Serializer.DeserializationList("serialize.json"));
 
             ShowList(_disciplineList);
+
+            label_itemsCounty.Text = "Всего элементов в списке: ";
+            label_itemsCounty.Text += listBox_ShowList.Items.Count;
         }
 
         private void Main_Form_Load(object sender, EventArgs e)
         {
             _disciplineList = Serializer.DeserializationList("serialize.json");
+            foreach(var item in _disciplineList)
+            {
+                listBox_ShowList.Items.Add(item);
+            }
+
+            history = new FormHistory();
         }
 
         private void trackBar_HourCounty_ValueChanged(object sender, EventArgs e)
@@ -260,11 +272,17 @@ namespace Lab03
         private void MenuItem_SortOnControlType_Click(object sender, EventArgs e)
         {
             ShowList(_disciplineList.OrderBy(x => x.ControlType).ToList());
+
+            label_itemsCounty.Text = "Всего элементов в списке: ";
+            label_itemsCounty.Text += listBox_ShowList.Items.Count;
         }
 
         private void MenuItem_SortOnHoursCounty_Click(object sender, EventArgs e)
         {
             ShowList(_disciplineList.OrderBy(x => x.HoursCounty).ToList());
+
+            label_itemsCounty.Text = "Всего элементов в списке: ";
+            label_itemsCounty.Text += listBox_ShowList.Items.Count;
         }
 
         private void Save_MenuItem_Click(object sender, EventArgs e)
@@ -276,5 +294,60 @@ namespace Lab03
         {
             MessageBox.Show($"\t\tVersion 1.0.1\t\t\n\n\t\tSlesarev Ivan", "About", MessageBoxButtons.OK);
         }
+
+        private void toolStripButton_Clear_Click(object sender, EventArgs e)
+        {
+            this.textBox_Discipline.Text = "";
+            this.textBox_LectorSurname.Text = "";
+            this.textBox_LectorName.Text = "";
+            this.textBox_LectorThirdname.Text = "";
+            this.textBox_LectorPhone.Text = "";
+            this.textBox_LectorKabinet.Text = "";
+            this.comboBox_Kafedra.SelectedIndex = -1;
+            this.checkBox_Term1.Checked = false;
+            this.checkBox_Term2.Checked = false;
+            for (int i = 0; i < checkedListBox_Spec.Items.Count; i++)
+            {
+                checkedListBox_Spec.SetItemChecked(i, false);
+            }
+            this.trackBar_HourCounty.Value = 1;
+
+            errorProvider_Discipline.Clear();
+            errorProvider_LectorKabinet.Clear();
+            errorProvider_LectorKafedra.Clear();
+            errorProvider_LectorName.Clear();
+            errorProvider_LectorPhone.Clear();
+            errorProvider_LectorSurname.Clear();
+            errorProvider_LectorThirdname.Clear();
+            errorProvider_Specialize.Clear();
+            errorProvider_Term.Clear();
+        }
+
+        private void toolStripButton_Delete_Click(object sender, EventArgs e)
+        {
+            listBox_ShowList.Items.Remove(listBox_ShowList.SelectedItem);
+
+            label_itemsCounty.Text = "Всего элементов в списке: ";
+            label_itemsCounty.Text += listBox_ShowList.Items.Count;
+
+            SaveState();
+        }
+
+        private void toolStripButton_HideTools_Click(object sender, EventArgs e)
+        {
+            this.toolStrip.Hide();
+        }
+
+        private void Tools_ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.toolStrip.Show();
+        }
+
+        private void toolStripButton_Back_Click(object sender, EventArgs e)
+        {
+            RestoreState(history.History.Pop());
+        }
+
+        
     }
 }
