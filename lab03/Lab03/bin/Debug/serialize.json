@@ -1,0 +1,104 @@
+[
+  {
+    "Name": "Алгоритмы и Структуры Данных",
+    "Term": "1",
+    "Course": 2,
+    "Spec": "ПОИТ",
+    "ControlType": "Экзамен",
+    "HoursCounty": 16,
+    "Lector": {
+      "Surname": "Шиман",
+      "Name": "Дмитрий",
+      "ThirdName": "Васильевич",
+      "Kafedra": "Кафедра ПИ",
+      "Kabinet": "211",
+      "Phone": "+483(48)39-84-783"
+    },
+    "CreatedDate": "0001-01-01T00:00:00"
+  },
+  {
+    "Name": "Конструирование ПО",
+    "Term": "1, 2",
+    "Course": 1,
+    "Spec": "ПОИТ, ИСИТ",
+    "ControlType": "Экзамен",
+    "HoursCounty": 34,
+    "Lector": {
+      "Surname": "Наркевич",
+      "Name": "Аделина",
+      "ThirdName": "Сергеевна",
+      "Kafedra": "Кафедра ПИ",
+      "Kabinet": "211",
+      "Phone": "+871(83)78-93-173"
+    },
+    "CreatedDate": "0001-01-01T00:00:00"
+  },
+  {
+    "Name": "аруорау",
+    "Term": "2",
+    "Course": 1,
+    "Spec": "ПОИБМС",
+    "ControlType": "Зачет",
+    "HoursCounty": 40,
+    "Lector": {
+      "Surname": "ититт",
+      "Name": "оролло",
+      "ThirdName": "лоро",
+      "Kafedra": "Кафедра ИСИТ",
+      "Kabinet": "465",
+      "Phone": "+879(44)-54-54-564"
+    },
+    "CreatedDate": "0001-01-01T00:00:00"
+  },
+  {
+    "Name": "лдаоул",
+    "Term": "1",
+    "Course": 1,
+    "Spec": "ДЭВИ",
+    "ControlType": "Экзамен",
+    "HoursCounty": 1,
+    "Lector": {
+      "Surname": "лололол",
+      "Name": "ололо",
+      "ThirdName": "лолдлдл",
+      "Kafedra": "Кафедра информ. и дизайна",
+      "Kabinet": "789",
+      "Phone": "+879(89)-79-78-978"
+    },
+    "CreatedDate": "0001-01-01T00:00:00"
+  },
+  {
+    "Name": "ороу",
+    "Term": "1",
+    "Course": 1,
+    "Spec": "ИСИТ",
+    "ControlType": "Экзамен",
+    "HoursCounty": 10,
+    "Lector": {
+      "Surname": "пщлро",
+      "Name": "олрол",
+      "ThirdName": "гпр",
+      "Kafedra": "Кафедра ПИ",
+      "Kabinet": "382",
+      "Phone": "+267(84)-67-63-487"
+    },
+    "CreatedDate": "2024-02-29T15:51:14.0606667+03:00"
+  },
+  {
+    "Name": "рпро",
+    "Term": "2",
+    "Course": 1,
+    "Spec": "ПОИТ",
+    "ControlType": "Экзамен",
+    "HoursCounty": 1,
+    "Lector": {
+      "Surname": "олр",
+      "Name": "оропнг",
+      "ThirdName": "шгш",
+      "Kafedra": "Кафедра информ. и дизайна",
+      "Kabinet": "786",
+      "Phone": "+739(87)-89-33-473"
+    },
+    "CreatedDate": "2024-02-29T20:46:24.0933986+03:00"
+  }
+]

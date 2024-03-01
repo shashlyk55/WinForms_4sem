@@ -1,0 +1,19 @@
+[
+  {
+    "Name": "Алгоритмы и Структуры Данных",
+    "Term": "1",
+    "Course": 2,
+    "Spec": "ПОИТ",
+    "ControlType": "Экзамен",
+    "HoursCounty": 16,
+    "Lector": {
+      "Surname": "Шиман",
+      "Name": "Дмитрий",
+      "ThirdName": "Васильевич",
+      "Kafedra": "Кафедра ПИ",
+      "Kabinet": "211",
+      "Phone": "+483(48)39-84-783"
+    },
+    "CreatedDate": "0001-01-01T00:00:00"
+  }
+]
