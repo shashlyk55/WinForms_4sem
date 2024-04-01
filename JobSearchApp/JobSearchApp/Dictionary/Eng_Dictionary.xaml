@@ -1,0 +1,16 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:system="clr-namespace:System;assembly=mscorlib">
+    <system:String x:Key="Language">Language</system:String>
+    <system:String x:Key="OrderBy">Sort by</system:String>
+    <system:String x:Key="FilterByJobType">Filter by job type</system:String>
+    <system:String x:Key="FilterBySalary">Filter by salary</system:String>
+    <system:String x:Key="Search">Search</system:String>
+    <system:String x:Key="Add_btn">Add</system:String>
+    <system:String x:Key="Edit_btn">Edit</system:String>
+    <system:String x:Key="Delete_btn">Delete</system:String>
+    <system:String x:Key="Search_btn">Search</system:String>
+    <system:String x:Key="Apply_btn">Apply</system:String>
+    <system:String x:Key="AddToFavorites_btn">Add to favorites</system:String>
+    <system:String x:Key="OpenFavorites_btn">Favorites</system:String>
+    <!-- Добавьте другие ресурсы по мере необходимости -->
+</ResourceDictionary>

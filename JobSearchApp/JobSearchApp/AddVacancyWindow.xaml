@@ -1,0 +1,31 @@
+﻿<Window x:Class="JobSearchApp.AddVacancyWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:JobSearchApp"
+        mc:Ignorable="d"
+        Title="AddVacancyWindow" Height="200" Width="500">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Company Logo:"/>
+        <TextBox Name="Logo_textBox" Grid.Row="0" Margin="5" Width="180"/>
+
+        <TextBlock Grid.Row="1" Text="Job Title:"/>
+        <TextBox Name="JobTitle_textBox" Grid.Row="1" Margin="5" Width="180"/>
+
+        <TextBlock Grid.Row="2" Text="Salary:"/>
+        <TextBox Name="Salary_textBox" Grid.Row="2" Margin="5" Width="180"/>
+
+        <Button Grid.Row="3" Content="Add" Click="AddButton_Click" Margin="5"/>
+
+        <Button Grid.Row="4" Content="Cancel" Click="CancelButton_Click" Margin="5"/>
+    </Grid>
+</Window>
